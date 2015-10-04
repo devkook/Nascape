@@ -40,6 +40,10 @@ public class ActMain extends Activity {
             public void onClick(View view) {
                 String urlStr = mEtAddress.getText().toString();
 
+                if(urlStr.isEmpty()) {
+                    urlStr = "digiNORI.com/4";
+                }
+
                 if (!urlStr.startsWith("http://")) {
                     urlStr = "http://" + urlStr;
                 }
